@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color:rgb(243, 226, 196)">
+    <script>
+        const add7 = () => {
+            let x = document.getElementById('num').value
+            document.getElementById("add7").innerHTML = parseInt(x) + 7
+        }
+
+        const multiply = () => {
+            let x = document.getElementById('nums').value
+            document.getElementById('multiply').innerHTML =
+             parseInt(x.split(' ')[0]) * 
+             parseInt(x.split(' ')[1])
+        }
+
+        const capitalize = () => {
+            str = document.getElementById('cap').value
+            newStr = ''
+            newStr += str[0].toUpperCase()
+            newStr += str.slice(1)
+            document.getElementById('capitalize').innerHTML = newStr
+        }
+
+        const lastLetter = () => {
+            let x = document.getElementById('lastChar').value
+            document.getElementById('lastLetter').innerHTML = x[x.length - 1]
+        }
+
+    </script>  
+    <h3>Adding 7 to another number with add7()</h3>
+    <label>Enter a number that will be added to 7.</label>
+    <input type="text" placeholder="Enter one number" id="num">
+    <button onclick="add7()">Add to Seven</button>
+    <p id="add7" style="color:rgb(1, 168, 29); font-size:40px"></p>
+    
+    <h3>Multiplying two numbers</h3>
+    <label>Enter two numbers seperated by a space to multiply.</label>
+    <input type="text" placeholder="Enter two numbers" id="nums">
+    <button onclick="multiply()">Multiply</button>
+    <p id="multiply" style="color:rgb(1, 168, 29); font-size:40px"></p>
+    
+    <h3>Capitalize properly</h3>
+    <label>Enter a string to capitalize the first letter only.</label>
+    <input type="text" placeholder="Enter text" id="cap">
+    <button onclick="capitalize()">Capitalize</button>
+    <p id="capitalize" style="color:rgb(1, 168, 29); font-size:40px"></p>
+
+    <h3>Returning last letter</h3>
+    <label>Enter a string and have the last character returned to you.</label>
+    <input type="text" placeholder="Enter text" id="lastChar">
+    <button onclick="lastLetter()">Last Char</button>
+    <p id="lastLetter" style="color:rgb(1, 168, 29); font-size:40px"></p>
+</body>
+</html>
